@@ -38,8 +38,8 @@ jobs:
 
     - name: Build, tag, and push Docker image
       env:
-        ECR_URI: ${{ env.REPO_URI }}
-        IMAGE_TAG: ${{ github.sha }}
+        ECR_URI: 697698820969.dkr.ecr.us-east-1.amazonaws.com/oh-test
+        IMAGE_TAG: oh
       run: |
         docker build -t $ECR_URI:$IMAGE_TAG .
         docker push $ECR_URI:$IMAGE_TAG
